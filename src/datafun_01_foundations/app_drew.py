@@ -1,6 +1,6 @@
-"""app_yourname.py - Project script.
+"""app_drew.py - Project script.
 
-Author: Your Name or Alias
+Author: Drew Schaffner
 Date: 2026-01
 
   Practice key Python skills related to:
@@ -21,7 +21,7 @@ OBS:
 TODO: Change the Author line of the docstring above to your name or alias.
 
 TODO: RENAME this file from app_yourname.py to something
-      that includes your name or alias, e.g., app_stellar_analytics.py.
+      that includes your name or alias, e.g., app_drew.py.
 
 TODO: Update the opening line of the docstring above to match the new file name.
 
