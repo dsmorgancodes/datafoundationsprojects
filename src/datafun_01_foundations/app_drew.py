@@ -55,22 +55,20 @@ LOG: logging.Logger = get_logger("P01", level="INFO")
 MY_ANALYTICS_COMPANY: Final[str] = "DataFun Analytics"
 MY_EMPLOYEE_COUNT: Final[int] = 150
 
-# See the other file for examples.
-# TODO: Declare and initialize a string (str) variable of your choice below:
+MY_FAVORITE_LANGUAGE: Final[str] = "DreamBird"
 
+MY_FAVORITE_NUMBER: Final[int] = 42
 
-# TODO: Declare and initialize an integer (int) variable of your choice below:
+MY_FAVORITE_PI: Final[float] = 3.14159
 
+MY_FAVORITE_BOOLEAN: Final[bool] = True
 
-# TODO: Declare and initialize a float (float) variable of your choice below:
-
-
-# TODO: Declare and initialize a boolean (bool) variable of your choice (True or False) below:
-
-
-# TODO: Declare and initialize a list of strings (list[str]) variable of your choice below:
-# REQ: Strings must be in quotes and items are separated by commas,
-# REQ: The list is wrapped in square brackets. (See the other file for examples.)
+MY_FAVORITE_PYTHON_LIBRARIES: Final[list[str]] = [
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "seaborn",
+]
 
 
 # === DECLARE A FUNCTION TO FORMAT THE INFORMATION ===
@@ -83,19 +81,16 @@ def get_summary() -> str:
 
     Returns: - a formatted multi-line string (starts with f and wrapped in triple quotes).
     """
-    # TODO: Create and return a multi-line f-string (triple-quoted) that includes
-    # all of the global variables you declared above, each on its own line,
-    # labeled clearly with descriptive text.
-    # See the other file for an example. Remember to start the string with an f!
+
     summary: str = f"""
     Custom Information:
         Company name: {MY_ANALYTICS_COMPANY}
         Employee count: {MY_EMPLOYEE_COUNT}
-        TODO: Add your other global variables below:
-
-
-
-
+        Favorite programming language: {MY_FAVORITE_LANGUAGE}
+        Favorite number: {MY_FAVORITE_NUMBER}
+        Favorite value of pi: {MY_FAVORITE_PI}
+        Favorite boolean value: {MY_FAVORITE_BOOLEAN}
+        Favorite Python libraries: {", ".join(MY_FAVORITE_PYTHON_LIBRARIES)}
 
     """
 
@@ -115,10 +110,7 @@ def get_statistics() -> str:
     Returns: - a formatted multi-line string.
     """
     # Initialize sample data - snowfall measurements in inches.
-    # REQ: Vary ONE of the sample data values.
-    # See how the statistics change when you do.
-    # TODO: Change one of the values in the list below.
-    snowfall_inches: list[float] = [2.5, 3.5, 4.5, 5.5, 6.5]
+    snowfall_inches: list[float] = [2.5, 3.0, 4.5, 5.5, 6.5]
 
     # Calculate descriptive statistics below - see other file for examples.
 
