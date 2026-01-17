@@ -13,20 +13,6 @@ Date: 2026-01
     - functions
     - main function
     - conditional execution guard
-
-OBS:
-  This is your file to practice and customize.
-  Find the TODO comments, and as you complete each task, remove the TODO note.
-
-TODO: Change the Author line of the docstring above to your name or alias.
-
-TODO: RENAME this file from app_yourname.py to something
-      that includes your name or alias, e.g., app_drew.py.
-
-TODO: Update the opening line of the docstring above to match the new file name.
-
-TODO: Update the associated `uv run python` command in the README.md file.
-
 """
 
 
@@ -52,7 +38,7 @@ LOG: logging.Logger = get_logger("P01", level="INFO")
 # `Final` is added to indicate these variables should not be reassigned.
 # Examples:
 
-MY_ANALYTICS_COMPANY: Final[str] = "DataFun Analytics"
+MY_ANALYTICS_COMPANY: Final[str] = "DreamBird Analytics"
 MY_EMPLOYEE_COUNT: Final[int] = 150
 
 MY_FAVORITE_LANGUAGE: Final[str] = "DreamBird"
@@ -120,23 +106,25 @@ def get_statistics() -> str:
     # Example : Calculate count of measurements.
     count: int = len(snowfall_inches)
 
-    # TODO: Calculate minimum and maximum snowfall (see other file for examples).
+    minimum: float = min(snowfall_inches) if count > 0 else 0.0
+    maximum: float = max(snowfall_inches) if count > 0 else 0.0
 
     # Use the statistics module to calculate average.
     average: float = statistics.mean(snowfall_inches) if count > 0 else 0.0
 
-    # TODO: Use the statistics module to calculate standard deviation below:
+    std_dev: float = statistics.stdev(snowfall_inches) if count > 0 else 0.0
 
     # Build a formatted multi-line string using f and triple quotes.
     summary: str = f"""
     Descriptive Statistics for Snowfall (inches):
         Total snowfall: {total:.2f} inches
-        TODO: Add your count of measurements below:
+        Count of measurements: {count}
 
-        TODO: Add your minimum and maximum snowfall below:
+        Minimum snowfall: {minimum:.2f} inches
+        Maximum snowfall: {maximum:.2f} inches
 
         Average snowfall: {average:.2f} inches
-        TODO: Add your standard deviation below:
+        Standard deviation: {std_dev:.2f} inches
 
     """
 
